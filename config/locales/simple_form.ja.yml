@@ -23,7 +23,7 @@ ja:
         current_password: 現在のパスワード
         data: データ
         display_name: 表示名
-        email: メールアドレス
+        email: メールアドレス（携帯メール不可）
         header: ヘッダー
         locale: 言語
         locked: 非公開アカウントにする

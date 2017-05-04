@@ -20,7 +20,8 @@
     = image_tag asset_pack_path('logo.png')
     = Setting.site_title
 
-  %p= t('about.about_mastodon').html_safe
+  - unless @instance_presenter.site_description.blank?
+    %p= @instance_presenter.site_description.html_safe
 
   .screenshot-with-signup
     .mascot= image_tag asset_pack_path('fluffy-elephant-friend.png')
@@ -72,9 +73,7 @@
           = fa_icon('li check-square')
           = t 'about.features.api'
 
-  - unless @instance_presenter.site_description.blank?
-    %h3= t('about.description_headline', domain: site_hostname)
-    %p= @instance_presenter.site_description.html_safe
+  %p= t('about.about_mastodon').html_safe
 
   .actions
     .info
